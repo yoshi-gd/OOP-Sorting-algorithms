@@ -16,20 +16,11 @@ class Sort:
     
     @property
     def sort_list(self):
-        i=0
-        while not self.isSorted:
-            if self._list[i] > self._list[i+1]:
-                self._list[i], self._list[i+1] = self._list[i+1], self._list[i]
-                self._counter+=1
-            i+=1
-            if i==len(self._list)-1:
-                i=0
-        return self._list
+        return sorted(self._list)
 
     @property
     def print_sorted_list(self):
-        self._sorted_list = self.sort_list
-        print(f"Sorted list: {self._sorted_list}")
+        print(f"Sorted list: {self.sort_list}")
         print(f"times swapped: {self._counter}")
 
     @property
@@ -38,7 +29,17 @@ class Sort:
         return(self._sorted_list)
     
 class BubbleSort(Sort):
-    pass
+    def __init__(self, lst):
+        super().__init__(lst)
+
+    @property
+    def sort_list(self):
+        while not self.isSorted:
+            for i in range(0, len(self._list)-1):
+                if self._list[i] > self._list[i+1]:
+                    self._list[i], self._list[i+1] = self._list[i+1], self._list[i]
+                    self._counter+=1
+        return self._list
 
 class MergeSort(Sort):
     pass
@@ -59,3 +60,16 @@ class BogoSort(Sort):
                 self._list[num1], self._list[num2] = self._list[num2], self._list[num1]
                 self._counter+=1
         return self._list
+    
+class HeapSort(Sort):
+    pass
+
+lst = [100, 4, -5, 3, 7, 1, 6, -1, 3, 7]
+lst1 = [5, 3, 2, 4, 1]
+random.shuffle(lst1)
+
+sorteD = BubbleSort(lst)
+
+sorteD.print_sorted_list
+
+lst2 = sorteD.get_sorted_list
