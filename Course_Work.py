@@ -63,13 +63,3 @@ class BogoSort(Sort):
     
 class HeapSort(Sort):
     pass
-
-lst = [100, 4, -5, 3, 7, 1, 6, -1, 3, 7]
-lst1 = [5, 3, 2, 4, 1]
-random.shuffle(lst1)
-
-sorteD = BubbleSort(lst)
-
-sorteD.print_sorted_list
-
-lst2 = sorteD.get_sorted_list
