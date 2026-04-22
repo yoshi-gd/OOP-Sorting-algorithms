@@ -112,4 +112,36 @@ class BogoSort(Sort):
         return self._list
     
 class HeapSort(Sort):
-    pass
+    
+    def __init__(self, lst):
+        super().__init__(lst)
+
+    @property
+    def sort_list(self):
+        length = len(self._list)
+
+        for i in range(length//2, -1, -1):
+            self.max_heap(length, i)
+
+        for i in range(length - 1, 0, -1):
+            self._list[0], self._list[i] = self._list[i], self._list[0]
+            self.max_heap(i, 0)
+    
+        return self._list
+
+    def max_heap(self, length, i):
+        largest = i
+
+        left = 2*i+1
+        right = 2*i+2
+
+        if left < length and self._list[left] > self._list[largest]:
+            largest = left
+
+        if right < length and self._list[right] > self._list[largest]:
+            largest = right
+
+        if largest != i:
+            self._list[i], self._list[largest] = self._list[largest], self._list[i]
+            self.max_heap(length, largest)
+        
