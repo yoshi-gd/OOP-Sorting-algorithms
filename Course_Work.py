@@ -17,7 +17,8 @@ class Sort:
     @property
     def _sort_list(self):
         self._counter = 0
-        return sorted(self._list)
+        self._list = sorted(self._list)
+        return self._list
 
     @property
     def print_sorted_list(self):
@@ -177,6 +178,7 @@ class HeapSort(Sort):
             self._list[i], self._list[largest] = self._list[largest], self._list[i]
             self.max_heap(length, largest)
 
+
 print("Welcome! What kind of list are you sorting? (Enter corresponding number)")
 print("1. Numbers")
 print("2. Words")
@@ -245,3 +247,4 @@ elif s3 == 2:
 else:
     with open(f_name, "w") as file:
         file.write(f"Sorted list: {S.get_sorted_list}")
+
