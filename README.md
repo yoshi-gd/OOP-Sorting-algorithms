@@ -9,7 +9,7 @@ To run the program simply copy the code and put it in environment that can comil
 
 To use the program there are 2 ways:
 1. importing the desired algorithms from Course_Work import (sort name) and then using .get_sorted_list to sort the given list and assign it or using .print_sorted_list to print the sorted list in the terminal
-2. copying the code to an environment that can run it and following the steps given in the terminal
+2. copying the code to an environment that can run it and following the steps given in the terminal. If the given list contains numbers it must be written in a line seperated by spaces. If the given list contains words they must be seperated by commas ","
 
 Body:
 
@@ -20,3 +20,12 @@ This code follows the 4 object-oriented programming pillars:
 4. Encapsulation
 
 This code uses the Strategy pattern as it is more suitable to keep the program versatile. Instead of being able to use only the most efficient sorting algorithm, the user is able to choose whichever one they want which could differ from user to user.
+
+This code mainly uses the composition principle because it makes the code more structured and the aggregation principle does not fit in this case.
+
+Results:
+● A working program that has multiple different sorting algorithms that can be imported to be used seperately or used as a program to read from and write to .txt files
+● Knowledge on how sorting algorithms like Heap Sort or Merge Sort work
+● Knowledge on how to use self referencing.
+
+Conclusion:
