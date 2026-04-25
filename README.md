@@ -21,14 +21,18 @@ Each sorting algorithm gives the same result - a sorted list, but each one does 
 - The original `_sort_list`
 <img width="486" height="176" alt="image" src="https://github.com/user-attachments/assets/baf7ffa9-3d60-4a4b-84a2-ca77e5da4360" />
 
+
 - BubbleSort's `_sort_list`
 <img width="1034" height="266" alt="image" src="https://github.com/user-attachments/assets/e156f262-af15-475a-bc18-8310a816ae21" />
+
 
 - MergeSort's `_sort_list`
 <img width="404" height="208" alt="image" src="https://github.com/user-attachments/assets/28144690-d19b-4fc6-b129-5c64dffffbd4" />
 
+
 - Quicksort's `_sort_list`
 <img width="420" height="188" alt="image" src="https://github.com/user-attachments/assets/e4a959e7-d1b8-40ae-81a2-e85da02c3589" />
+
 
 
 - Bogosort's `_sort_list`
