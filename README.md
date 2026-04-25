@@ -16,7 +16,7 @@ To use the program there are 2 ways:
 This code follows the 4 object-oriented programming pillars:
 1. **Polymorphism** - Same operation differently performed.
 
-Each sorting algorithm gives the same result - a sorted list, but each one does it differently. Using polymorphism we can have each algorithm override only the `_sort_list` method to reduce the code size.
+Each sorting algorithm gives the same result - a sorted list, but each one does it differently. Using polymorphism we can have each algorithm override only the `_sort_list` method to reduce the code size and complexity.
 
 - The original `_sort_list`
 <img width="486" height="176" alt="image" src="https://github.com/user-attachments/assets/baf7ffa9-3d60-4a4b-84a2-ca77e5da4360" />
@@ -46,7 +46,7 @@ Each sorting algorithm gives the same result - a sorted list, but each one does 
 ---
 2. **Abstraction** - a simple interface
 
-As mentioned above there are 2 simple ways to use this code - using the terminal to let the code do everything for you or using `.get_sorted_list` and `.print_sorted_list` after importing the desired algorithms
+Using abstraction allows for 2 simple ways to use this code - using the terminal to let the code do everything for you or using `.get_sorted_list` and `.print_sorted_list` after importing the desired algorithms
 
 - Terminal interface example and code:
 <img width="1028" height="732" alt="image" src="https://github.com/user-attachments/assets/ef0f77cb-2a7d-4086-a2f2-11028756a895" />
@@ -55,7 +55,11 @@ As mentioned above there are 2 simple ways to use this code - using the terminal
 
 
 ---
-3. **Inheritance**
+3. **Inheritance** - The ability to create a modified version of a class without changing it.
+
+Using inheritance allows the code to be shortened and easier to read. In this instance each sorting algorithm inherits the main structure from the main `class Sort` which makes it not necessary to constantly copy the whole structure to each algorithm.
+
+<img width="380" height="546" alt="image" src="https://github.com/user-attachments/assets/87db9c34-dfaf-4dd1-a54b-1b003b745855" />
 
 ---
 4. **Encapsulation**
