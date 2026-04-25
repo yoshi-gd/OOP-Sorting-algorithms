@@ -81,3 +81,5 @@ This code mainly uses the composition principle because it makes the code more s
 - Knowledge on how to use self referencing.
 
 ## Conclusion:
+
+In conclusion this mini project allowed me to explore different sorting algorithms, how they work internally, the importance of the 4 pillars of OOP. In the future this code may be updated to add more algorithms to experiment their efficiency.
