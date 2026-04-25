@@ -82,4 +82,4 @@ This code mainly uses the composition principle because it makes the code more s
 
 ## Conclusion:
 
-In conclusion this mini project allowed me to explore different sorting algorithms, how they work internally, the importance of the 4 pillars of OOP. In the future this code may be updated to add more algorithms to experiment their efficiency.
+In conclusion this mini project allowed me to explore different sorting algorithms, how they work internally, the importance of the 4 pillars of OOP and error handling. In the future this code may be updated to add more algorithms to experiment their efficiency.
