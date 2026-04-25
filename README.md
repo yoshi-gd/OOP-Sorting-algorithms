@@ -57,15 +57,22 @@ Using abstraction allows for 2 simple ways to use this code - using the terminal
 ---
 3. **Inheritance** - The ability to create a modified version of a class without changing it.
 
-Using inheritance allows the code to be shortened and easier to read. In this instance each sorting algorithm inherits the main structure from the main `class Sort` which makes it not necessary to constantly copy the whole structure to each algorithm.
+Using inheritance allows the code to be shortened and easier to read. In this case each sorting algorithm inherits the main structure from the main `class Sort` which makes it not necessary to constantly copy the whole structure to each algorithm.
 
 <img width="380" height="546" alt="image" src="https://github.com/user-attachments/assets/87db9c34-dfaf-4dd1-a54b-1b003b745855" />
 
 ---
-4. **Encapsulation**
+4. **Encapsulation** - ease of information control
 
+Using encapsulation it allows easy control of information by telling us which elements can be changed and which can't/shouldn't. In this case using underscores we can say that `_list`, `_counter` shouldn't be changed outside by external code and only be accessed by internal code.
+
+<img width="784" height="218" alt="image" src="https://github.com/user-attachments/assets/8f9ba35a-4261-4a5e-8631-ca4a9f738f2f" />
+
+---
+**Patterns**
 This code uses the Strategy pattern as it is more suitable to keep the program versatile. Instead of being able to use only the most efficient sorting algorithm, the user is able to choose whichever one they want which could differ from user to user.
 
+**Composition/Aggregation**
 This code mainly uses the composition principle because it makes the code more structured and the aggregation principle does not fit in this case.
 
 ## Results:
