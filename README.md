@@ -69,10 +69,10 @@ Using encapsulation it allows easy control of information by telling us which el
 <img width="784" height="218" alt="image" src="https://github.com/user-attachments/assets/8f9ba35a-4261-4a5e-8631-ca4a9f738f2f" />
 
 ---
-**Patterns**
+**Patterns**  
 This code uses the Strategy pattern as it is more suitable to keep the program versatile. Instead of being able to use only the most efficient sorting algorithm, the user is able to choose whichever one they want which could differ from user to user.
 
-**Composition/Aggregation**
+**Composition/Aggregation**  
 This code mainly uses the composition principle because it makes the code more structured and the aggregation principle does not fit in this case.
 
 ## Results:
