@@ -16,7 +16,7 @@ To use the program there are 2 ways:
 This code follows the 4 object-oriented programming pillars:
 1. **Polymorphism** - Same operation differently performed.
 
-Each sorting algorithm gives the same result - a sorted list, but each one does it differently. Using polymorphism we can have each algorithm override only the `_sort_list` function to reduce the code size.
+Each sorting algorithm gives the same result - a sorted list, but each one does it differently. Using polymorphism we can have each algorithm override only the `_sort_list` method to reduce the code size.
 
 - The original `_sort_list`
 <img width="486" height="176" alt="image" src="https://github.com/user-attachments/assets/baf7ffa9-3d60-4a4b-84a2-ca77e5da4360" />
