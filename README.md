@@ -15,6 +15,7 @@ To use the program there are 2 ways:
 
 This code follows the 4 object-oriented programming pillars:
 1. **Polymorphism**
+<img width="996" height="190" alt="image" src="https://github.com/user-attachments/assets/732ad22a-5bdb-467f-821d-ec0c4b80fd4a" />
 
 ---
 2. **Abstraction**
