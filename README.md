@@ -24,10 +24,8 @@ This code uses the Strategy pattern as it is more suitable to keep the program v
 This code mainly uses the composition principle because it makes the code more structured and the aggregation principle does not fit in this case.
 
 ## Results:
-● A working program that has multiple different sorting algorithms that can be imported to be used seperately or used as a program to read from and write to .txt files
-
-● Knowledge on how sorting algorithms like Heap Sort or Merge Sort work
-
+● A working program that has multiple different sorting algorithms that can be imported to be used seperately or used as a program to read from and write to .txt files  
+● Knowledge on how sorting algorithms like Heap Sort or Merge Sort work  
 ● Knowledge on how to use self referencing.
 
 ## Conclusion:
