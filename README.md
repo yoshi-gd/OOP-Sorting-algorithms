@@ -15,8 +15,14 @@ To use the program there are 2 ways:
 
 This code follows the 4 object-oriented programming pillars:
 1. **Polymorphism**
+
+---
 2. **Abstraction**
+
+---
 3. **Inheritance**
+
+---
 4. **Encapsulation**
 
 This code uses the Strategy pattern as it is more suitable to keep the program versatile. Instead of being able to use only the most efficient sorting algorithm, the user is able to choose whichever one they want which could differ from user to user.
