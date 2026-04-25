@@ -8,7 +8,6 @@ class Sort:
         else:
             raise ValueError("Please provide a non empty list")
 
-        self._sorted_list = []
         self._counter = 0
 
     @property
@@ -29,6 +28,12 @@ class Sort:
     @property
     def get_sorted_list(self):
         return (self._sort_list)
+    
+    @property
+    def get_reverse_sorted_list(self):
+        reverse = self._sort_list
+        reverse.reverse()
+        return (reverse)
 
 
 class BubbleSort(Sort):
@@ -184,12 +189,10 @@ class HeapSort(Sort):
             self._list[i], self._list[largest] = self._list[largest], self._list[i]
             self.max_heap(length, largest)
 
-
-
 print("Welcome! What kind of list are you sorting? (Enter corresponding number)")
 print("1. Numbers")
 print("2. Words")
-s1 = int(input("Option: "))
+s1 = int(input("Option: ").strip())
 if s1 != 1 and s1 !=2:
     raise Exception("Option does not exist, please try again")
 print()
@@ -201,10 +204,15 @@ print("3. Quick Sort")
 print("4. Bogo Sort")
 print("5. Heap Sort")
 print("6. Python sorting")
-s2 = int(input("Option: "))
+s2 = int(input("Option: ").strip())
 if s2 not in range(1,7):
     raise Exception("Option does not exist, please try again")
 print()
+
+print("Do you want the list to be reversed? (lowest to highest -> highest to lowest)")
+s4 = input("Y/N: ").strip().upper()
+if s4 != "Y" and s4 != "N":
+    raise Exception("Option does not exist, please try again")
 
 print("Do you want a new file with the unsorted and sorted list")
 print("Or the sorted list added to current file")
@@ -212,7 +220,7 @@ print("Or rewrite the file with the sorted list?")
 print("1. New")
 print("2. Add")
 print("3. Rewrite")
-s3 = int(input("Option: "))
+s3 = int(input("Option: ").strip())
 if s3 not in range(1, 4):
     raise Exception("Option does not exist, please try again")
 print()
@@ -226,10 +234,31 @@ if s3 == 1:
 
 if s1 == 1:
     with open(f_name, 'r') as file:
-        List=[int(number) for number in file.read().split()]
+        text = file.read().split()
+   
+    if not text:
+        raise ValueError("File is empty")
+
+    try:
+        List=[float(number) for number in text]
+    except ValueError:
+        raise ValueError("File must contain only numbers")
+    
+        
+
 else:
     with open(f_name, 'r') as file:
-        List=[word.strip() for word in file.read().split(',')]
+        text = file.read().strip()
+
+    if not text:
+        raise ValueError("File is empty")
+    if ',' not in text:
+        raise ValueError("Words must be separated by commas")
+    
+    List = [word.strip() for word in text.split(',')]
+    
+    if any(word == '' for word in List):
+        raise ValueError("Empty words are not allowed. Check your comma placements")
 
 algorithms = {
     1: BubbleSort(List),
@@ -242,16 +271,30 @@ algorithms = {
 
 S=algorithms[s2]
 
-if s3 == 1:
-    f = open(f_new, "x")
-    with open(f_new, "w") as file:
-        file.write(f"Unsorted list: {List}\n")
-        file.write(f"Sorted list: {S.get_sorted_list}\n")
-elif s3 == 2:
-    with open(f_name, "a") as file:
-        file.write("\n")
-        file.write(f"Sorted list: {S.get_sorted_list}")
-else:
-    with open(f_name, "w") as file:
-        file.write(f"Sorted list: {S.get_sorted_list}")
 
+if s4 == "N":
+    if s3 == 1:
+        f = open(f_new, "x")
+        with open(f_new, "w") as file:
+            file.write(f"Unsorted list: {List}\n")
+            file.write(f"Sorted list: {S.get_sorted_list}\n")
+    elif s3 == 2:
+        with open(f_name, "a") as file:
+            file.write("\n")
+            file.write(f"Sorted list: {S.get_sorted_list}")
+    else:
+        with open(f_name, "w") as file:
+            file.write(f"Sorted list: {S.get_sorted_list}")
+else:
+    if s3 == 1:
+        f = open(f_new, "x")
+        with open(f_new, "w") as file:
+            file.write(f"Unsorted list: {List}\n")
+            file.write(f"Sorted list: {S.get_reverse_sorted_list}\n")
+    elif s3 == 2:
+        with open(f_name, "a") as file:
+            file.write("\n")
+            file.write(f"Sorted list: {S.get_reverse_sorted_list}")
+    else:
+        with open(f_name, "w") as file:
+            file.write(f"Sorted list: {S.get_reverse_sorted_list}")
