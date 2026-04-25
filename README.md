@@ -8,7 +8,7 @@ The goal is to make a collection of sorting algorithms that can easily be import
 To run the program simply copy the code and put it in environment that can comile and run python from there ***follow the written instructions in the terminal***
 
 To use the program there are 2 ways:
-1. importing the desired algorithms from Course_Work import (sort name) and then using `.get_sorted_list` to sort the given list and assign it or using `.print_sorted_list` to print the sorted list in the terminal
+1. importing the desired algorithms `from Course_Work import (sort name)` and then using `.get_sorted_list` to sort the given list and assign it or using `.print_sorted_list` to print the sorted list in the terminal
 2. copying the code to an environment that can run it and ***following the steps given in the terminal***. If the given list contains numbers ***it must be written in a line seperated by spaces***. If the given list contains words ***they must be seperated by commas ","***
 
 ## Analysis:
@@ -44,7 +44,15 @@ Each sorting algorithm gives the same result - a sorted list, but each one does 
 
 
 ---
-2. **Abstraction**
+2. **Abstraction** - a simple interface
+
+As mentioned above there are 2 simple ways to use this code - using the terminal to let the code do everything for you or using `.get_sorted_list` and `.print_sorted_list` after importing the desired algorithms
+
+- Terminal interface example and code:
+<img width="1028" height="732" alt="image" src="https://github.com/user-attachments/assets/ef0f77cb-2a7d-4086-a2f2-11028756a895" />
+
+<img width="584" height="272" alt="image" src="https://github.com/user-attachments/assets/5a3ef215-b0f8-473c-a329-a63bc6f9b609" />
+
 
 ---
 3. **Inheritance**
